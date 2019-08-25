@@ -18,8 +18,8 @@ import LocalTime from "local-time"
 LocalTime.start()
 
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
-import { faHome, faSearch, faShoppingBasket, faMehBlank, faShoppingBag, faBars, faCreditCard } from "@fortawesome/free-solid-svg-icons";
-library.add(faHome, faSearch, faMehBlank, faShoppingBasket, faShoppingBag, faBars, faCreditCard);
+import { faHome, faSearch, faShoppingBasket, faEnvelopeOpenText, faShoppingBag, faBars, faCreditCard } from "@fortawesome/free-solid-svg-icons";
+library.add(faHome, faSearch, faEnvelopeOpenText, faShoppingBasket, faShoppingBag, faBars, faCreditCard);
 dom.watch();
 
 if (navigator.serviceWorker) {
