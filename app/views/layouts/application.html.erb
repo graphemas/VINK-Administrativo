@@ -44,27 +44,9 @@
       <div class="columns is-gapless is-mobile">
         <div class="column is-centered">
           <p class="has-background-light">
-            <%= link_to root_path, class: "link #{yield :categories_selected}" do %>
-              <span class="icon is-large">
-                <i class="fas fa-3x fa-search"></i>
-              </span>
-            <% end %>
-          </p>
-        </div>
-        <div class="column is-centered">
-          <p class="has-background-light">
-            <%= link_to root_path, class: "link" do %>
-              <span class="icon is-large">
-                <i class="fas fa-3x fa-home"></i>
-              </span>
-            <% end %>
-          </p>
-        </div>
-        <div class="column is-centered">
-          <p class="has-background-light">
             <%= link_to appoitments_path, class: "link" do %>
               <span class="icon is-large">
-                <i class="fas fa-3x fa-envelope"></i>
+                <i class="fas fa-3x fa-envelope-open-text"></i>
               </span>
             <% end %>
           </p>
