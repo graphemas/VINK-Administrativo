@@ -1,0 +1,11 @@
+<h1>Listado de citas</h1>
+<h1><%= Appoitment::STORES[0][0] %></h1>
+<% @appoitments.each do |appoitment| %>
+  <div class="column is-centered">
+    <p class="has-background-light">
+      <%= link_to appoitment_path(appoitment), class: "link" do %>
+        <%= appoitment.subject %>
+      <% end %>
+    </p>
+  </div>
+<% end %>

@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   get 'scanner/index'
   resources 'categories'
   resources 'products'
+  resources 'appoitments'
   get 'home/products'
-  get 'home/appointments'
   get 'home/messages'
   get '/service-worker.js' => "service_worker#service_worker"
   get '/manifest.json' => "service_worker#manifest"
