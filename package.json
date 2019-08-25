@@ -1,0 +1,20 @@
+{
+  "name": "proposito",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "3.4",
+    "bulma": "^0.7.5",
+    "local-time": "^2.1.0",
+    "rails-erb-loader": "^5.5.2",
+    "rails-ujs": "^5.2.3",
+    "stimulus": "^1.1.1",
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
+}

@@ -1,0 +1,2 @@
+class Appoitment < ApplicationRecord
+end

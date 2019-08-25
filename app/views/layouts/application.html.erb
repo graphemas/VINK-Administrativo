@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vink</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <meta name="description" lang="en" content="">
+    <meta name="description" lang="es" content="">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= action_cable_meta_tag %>
+    <%= yield :stylesheets %>
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+  </head>
+
+  <body class="has-navbar-fixed-top has-navbar-fixed-bottom">
+    <nav class="navbar is-fixed-top has-background-warning" role="navigation" aria-label="main navigation">
+      <div class="columns is-mobile">
+        <div class="column has-text-left">
+          <%= header_menu_left %>
+        </div>
+        <div class="column has-text-centered">
+          <%= header_title %>
+        </div>
+        <div class="column has-text-right">
+          <%= header_menu_right %>
+        </div>
+      </div>
+    </nav>
+    <main class="db-main">
+      <%= yield %>
+    </main>
+    <footer class="has-background-light">
+      <div class="columns is-gapless is-mobile">
+        <div class="column is-centered">
+          <p class="has-background-light">
+            <%= link_to root_path, class: "link #{yield :categories_selected}" do %>
+              <span class="icon is-large">
+                <i class="fas fa-3x fa-search"></i>
+              </span>
+            <% end %>
+          </p>
+        </div>
+        <div class="column is-centered">
+          <p class="has-background-light">
+            <%= link_to root_path, class: "link" do %>
+              <span class="icon is-large">
+                <i class="fas fa-3x fa-home"></i>
+              </span>
+            <% end %>
+          </p>
+        </div>
+        <div class="column is-centered">
+          <p class="has-background-light">
+            <%= link_to root_path, class: "link" do %>
+              <span class="icon is-large">
+                <i class="fas fa-3x fa-home"></i>
+              </span>
+            <% end %>
+          </p>
+        </div>
+        <div class="column is-centered">
+          <p class="has-background-light">
+            <%= link_to home_messages_path, class: "link" do %>
+              <span class="icon is-large">
+                <i class="fas fa-3x fa-home"></i>
+              </span>
+            <% end %>
+          </p>
+        </div>
+        <div class="column is-centered">
+          <p class="has-background-light">
+            <%= link_to scanner_index_path, class: "link" do %>
+              <span class="icon is-large">
+                <i class="fa fa-shopping-basket fa-3x"></i>
+              </span>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

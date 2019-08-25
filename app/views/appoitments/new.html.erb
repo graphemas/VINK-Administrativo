@@ -1,0 +1,18 @@
+<h1>Agendar una cita</h1>
+<%= form_for @appoitment, as: :appoitment , url: appoitments_path, method: :post do |l| %>
+  <div class="field">
+    <%= l.label "Asunto", class: "label" %>
+    <div class= "control">
+      <%= l.text_field :subject, class: "input" %>
+    </diV>
+  </div>
+  <div class= "field">
+    <%= l.label "Descripción", class: "label" %>
+    <div class= "control">
+      <%= l.text_area :description, class: "textarea" %>
+    </div>
+  </div>
+  <div class="col-md-12 text-center">
+    <%= l.submit "Guardar", class: "button"%>
+  </div>
+<% end %>

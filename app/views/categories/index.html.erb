@@ -1,0 +1,32 @@
+<%- content_for( :categories_selected ) { "selected" } %>
+<%- content_for( :footer ) {  } %>
+<%- content_for( :header_menu_left ) { } %>
+<%- content_for( :header_menu_rught ) { } %>
+
+<aside class="menu">
+  <% @data.each do |name| %>
+    <% if name['children'].count > 0 %>
+      <p class="menu-label">
+        <%= name['name'] %>
+      </p>
+      <ul class="menu-list">
+        <% name['children'].each do |subname| %>
+          <% if subname['children'].count > 0 %>
+            <li>
+              <a><%= subname['name']%></a>
+              <ul>
+                <% subname['children'].each do |minimalname| %>
+                  <li>
+                    <%= link_to products_path(category_id: minimalname['id']) do %>
+                      <%= minimalname['name']%>
+                    <% end %>
+                  </li>
+                <% end %>
+              </ul>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    <% end %>
+  <% end %>
+</aside>

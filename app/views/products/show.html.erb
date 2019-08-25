@@ -1,0 +1,16 @@
+<h1>Detalle de producto</h1>
+<%= image_tag("192x192.png") %>
+<br>
+<%= link_to "Agendar cita", new_appoitment_path, class: "button is-danger"%>
+<%= link_to "Lo quiero", "#", class: "button is-danger"%>
+<br>
+<% @product.each do |detail|  %>
+  <% detail.reverse_each do |key, value| %>
+      <% if value.is_a?(String) && value != '' %>
+        <%= value %>
+      <% else %>
+        <%= value[0] %>
+      <% end %>
+    <br>
+  <% end %>
+<% end %>

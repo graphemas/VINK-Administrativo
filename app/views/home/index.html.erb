@@ -1,0 +1,30 @@
+<%- content_for( :categories_selected ) { "selected" } %>
+<%- content_for( :footer ) {  } %>
+<%- content_for( :header_menu_left ) { } %>
+<%- content_for( :header_menu_rught ) { } %>
+
+<h1>Home#index</h1>
+<% @data.each do |name| %>
+  <p style="margin-bottom: 2px;">
+    <%unless name["children"].empty? %>
+      despliega
+      <%= link_to "#{name['name']}", "#", class: "button is-dark" %>
+    <% else %>
+      <%= link_to "#{name['name']}", "#", class: "button is-dark" %>
+    <% end %>
+  </p>
+
+  <% name['children'].each do |subname| %>
+    <p>second
+      <%= subname['name']%>
+    </p>
+    <% subname['children'].each do |minimalname| %>
+      <p>third
+        <%= minimalname['name']%>
+        <span>
+        <%= minimalname['id']%>
+      </p>
+    <%end%>
+  <%end%>
+<%end%>
+<p>Find me in app/views/home/index.html.erb</p>
